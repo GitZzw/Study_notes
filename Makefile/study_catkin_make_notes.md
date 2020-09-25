@@ -1,6 +1,8 @@
 ## [参考文献1]：(https://docs.ros.org/melodic/api/catkin/html/howto/index.html)
 ## [参考文献2]：(http://wiki.ros.org/catkin/CMakeLists.txt)
 ## [参考文献3]：(http://wiki.ros.org/catkin/package.xml)
+## [参考文献4]：(https://www.ros.org/reps/rep-0127.html)
+## [参考文献5]：(https://www.ros.org/reps/rep-0140.html)
 
 # Catkin编译系统
 ## 1.catkin概述
@@ -208,12 +210,14 @@
 
             ## Specify additional locations of header files
             ## Your package locations should be listed before other locations
+            ## include_directories()：添加头文件路径
             include_directories(
             # include
               ${catkin_INCLUDE_DIRS}
             )
 
             ## Declare a C++ library
+            ## add_library()：生成库文件
             # add_library(${PROJECT_NAME}
             #   src/${PROJECT_NAME}/test1.cpp
             # )
@@ -221,11 +225,13 @@
             ## Add cmake target dependencies of the library
             ## as an example, code may need to be generated before libraries
             ## either from message generation or dynamic reconfigure
+            ## add_dependencies()：添加依赖项，在使用ROS的message、service、action时添加
             # add_dependencies(${PROJECT_NAME} ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
             ## Declare a C++ executable
             ## With catkin_make all packages are built within a single CMake context
             ## The recommended prefix ensures that target names across packages don't collide
+            ## add_executable()：生成可执行文件
             # add_executable(${PROJECT_NAME}_node src/test1_node.cpp)
 
             ## Rename C++ executable without prefix
@@ -239,6 +245,7 @@
             # add_dependencies(${PROJECT_NAME}_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
             ## Specify libraries to link a library or executable target against
+            ## 为可执行文件或库添加链接库
             # target_link_libraries(${PROJECT_NAME}_node
             #   ${catkin_LIBRARIES}
             # )
