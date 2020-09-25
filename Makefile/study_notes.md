@@ -1,4 +1,5 @@
 ## [参考资料1，关于makefile]:(https://tieba.baidu.com/p/591519800?pn=0)
+或者[pdf版本]:(https://github.com/GitZzw/Master_Degree/blob/master/Makefile/Makefile%E8%AF%A6%E8%A7%A3.pdf)
 
 # 什么是makefile
 > makefile关系到了整个工程的编译规则。
@@ -27,11 +28,12 @@
 
 ### 3.补充
 > 假设有三个文件**a.h，b.c，main.c(#include "a.h")**
-> 其中**#include "a.h"**表示将a.h中的内容(即声明)拷贝过来，使得编译能够成功，编译只关心编译器需要的是语法、函数与变量的声明的正确，并不关心**a.h**中函数如何实现或在哪个源文件中实现。
-> **[参考文档：头文件和源文件的关系]()
+> 其中`(#include "a.h")`表示将**a.h**中的内容(即声明)拷贝过来，使得编译能够成功，编译只关心编译器需要的是语法、函数与变量的声明的正确，并不关心**a.h**中函数如何实现或在哪个源文件中实现。
+
+> **[参考文档：头文件和源文件的关系]：(https://github.com/GitZzw/Master_Degree/blob/master/Makefile/%E5%A4%B4%E6%96%87%E4%BB%B6%E5%92%8C%E6%BA%90%E6%96%87%E4%BB%B6%E7%9A%84%E5%85%B3%E7%B3%BB.pdf)**
 
 
-> 编译时将**main.c**和**b.c**编译为**main.o**和**b.o**，要将main.o生成为可执行文件需要链接相应的库，此时在makefile文件中指明**main.o**链接**b.o**，使得链接能够成功。
+> 编译时将**main.c**和**b.c**编译为**main.o**和**b.o**，要将**main.o**生成为可执行文件需要链接相应的库，此时在makefile文件中指明**main.o**链接**b.o**，使得链接能够成功。
 > makefile指明链接时相应的库,或者在所以obj中建立符号表，在符号表中找对应的函数和变量实现。
 
 
