@@ -1,4 +1,4 @@
-（）## [参考文献]:()
+## [参考文献]:(https://github.com/GitZzw/Master_Degree/blob/master/Makefile/cmake%E6%95%99%E7%A8%8B.pdf)
 
 # 1.什么是cmake
 > cmake和autotools是makefile的上层工具。它们的目的正是为了产生可移植的makefile，并简化自己动手写makefile时的巨大工作量。
