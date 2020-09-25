@@ -305,3 +305,65 @@
             ## Add folders to be run by python nosetests
             # catkin_add_nosetests(test)
 ```
+
+
+# 编译静态库和动态库
+> 编译库函数的时候，可以选择编译成静态库或者动态库。静态库对应.a文件，动态库对应.so文件(以冒泡排序为例)
+
+## 1.编写StaticBubble.h头文件，路径在软件包的include文件夹下
+    ```
+        using namespace std;
+        void bubbleSort(int array[], int num);
+    ```
+    
+## 2.在软件包的src文件下创建StaticBubble.cpp文件，用于实现上面头文件中定义的函数
+     ```
+        #include <iostream>
+        using namespace std;
+        void bubbleSort(int array[], int num){
+            for(int i = 0; i < num; i++){
+                for(int j = 0; j < num - i - 1; j++){
+                    if(array[j] > array[j + 1]){
+                        int temp = array[j];
+                        array[j] = array[j + 1];
+                        array[j + 1] = temp;
+                    }
+                }
+            }
+        }
+    ```
+    
+ ## 3.在src文件夹下创建测试程序testBubble.cpp，里面包含main函数
+ ```
+            #include <iostream>
+            #include <StaticBubble.h>
+
+            using namespace std;
+
+            int main(int argc, char **argv){
+                int array[5] = {32,54,38,65,98};
+                bubbleSort(array, 5);
+                for(int i = 0; i < 5; i++){
+                    cout << array[i] << '\t';
+                }
+                cout << endl;
+
+            }
+   ```
+   
+## 4.CMakelist
+> add_library中可以选择STATIC或者缺省，代表编译成静态库，即.a文件;选择SHARED时，编译成动态库。
+   ```
+            cmake_minimum_required(VERSION 3.7)
+            project(Static_Lib)
+
+            set(CMAKE_CXX_STANDARD 11)
+            #导入头文件和生成链接库
+            include_directories(include)
+            add_library(StaticBubble STATIC src/StaticBubble.cpp)   #STATIC  or SHARED
+
+            #生成可执行程序，链接库
+            add_executable(Static_Lib src/testBubble.cpp)
+            target_link_libraries(Static_Lib StaticBubble)
+   ```
+   
