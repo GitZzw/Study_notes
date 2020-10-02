@@ -6,7 +6,7 @@
 ### 使用步骤
 #### 1.下载darknet包
 
-> \>>git clone https://github.com/AlexeyAB/darknet.git
+> `>> git clone https://github.com/AlexeyAB/darknet.git`
 
 
 #### 2.下载pre-trained weights
