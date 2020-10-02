@@ -11,7 +11,7 @@
 > 下载地址:(https://github.com/GitZzw/Study_notes/tree/master/YOLOv4)
 
 
-#### 3.在/darknet/data文件夹下创建pic txt xml三个文件夹
+#### 3.在/darknet/data文件夹下创建pic和xml这两个文件夹
 
 
 #### 4.将训练图像存放到/darknet/data/pic文件夹下,将对应图像名的对应xml文件存放到/darknet/data/xml文件夹下
