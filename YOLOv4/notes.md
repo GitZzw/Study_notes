@@ -8,7 +8,7 @@
 
 #### 2.下载两个文件yolov4run.py和configer.py到/darknet目录下
 
-> 下载地址:()
+> 下载地址:(https://github.com/GitZzw/Study_notes/tree/master/YOLOv4)
 
 
 #### 3.在/darknet/data文件夹下创建pic txt xml三个文件夹
