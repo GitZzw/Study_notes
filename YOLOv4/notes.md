@@ -1,4 +1,4 @@
-## 基于深度学习框架darknet的yolov4算法应用
+## 基于深度学习框架darknet的yolov4
 
 ### [参考资料](https://github.com/AlexeyAB/darknet)
 
