@@ -11,7 +11,7 @@
 
 #### 2.下载pre-trained weights
 
-> \>>wget https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v3_optimal/yolov4.conv.137
+> '\>>wget https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v3_optimal/yolov4.conv.137'
 
 
 #### 3.在/darknet/data文件夹下创建pic和xml这两个文件夹
@@ -29,7 +29,7 @@
 
 #### 6.运行yolov4run.py,然后根据提示操作即可
 
-> \>>python yolov4run.py
+> '\>>python yolov4run.py'
 
 
 
