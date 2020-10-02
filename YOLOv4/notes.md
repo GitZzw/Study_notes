@@ -1,6 +1,6 @@
 ## 基于深度学习框架darknet的yolov4算法应用
 
-### [参考资料]:(https://github.com/AlexeyAB/darknet)
+### [参考资料](https://github.com/AlexeyAB/darknet)
 
 
 ### 使用步骤
@@ -19,15 +19,16 @@
 
 #### 4.将训练图像存放到/darknet/data/pic文件夹下,将对应图像名的对应xml文件存放到/darknet/data/xml文件夹下
 
-> xml文件获得方法使用 **labelImg** 工具(https://github.com/tzutalin/labelImg)
+> xml文件获得方法使用 **[labelImg](https://github.com/tzutalin/labelImg)** 工具
 
 
 #### 5.下载两个文件yolov4run.py和configer.py到/darknet目录下
 
-> 下载地址:(https://github.com/GitZzw/Study_notes/tree/master/YOLOv4)
+> [下载地址](https://github.com/GitZzw/Study_notes/tree/master/YOLOv4)
 
 
 #### 6.运行yolov4run.py,然后根据提示操作即可
+
 > \>>python yolov4run.py
 
 
@@ -44,4 +45,6 @@
 
 >  训练权重结果文件每迭代100次会自动保存到/darknet/backup/文件夹下
 
->  停止迭代次数的选择可以参考 (https://github.com/AlexeyAB/darknet#when-should-i-stop-training) 的内容
+>  停止迭代次数的选择可以[参考内容](https://github.com/AlexeyAB/darknet#when-should-i-stop-training)
+
+![图片](https://camo.githubusercontent.com/51af5be5cfa94b6d741c90d10a163b168bf9170e/68747470733a2f2f6873746f2e6f72672f66696c65732f3564632f3761652f3766612f35646337616537666164396434653365623361343834633538626663316666352e706e67)
