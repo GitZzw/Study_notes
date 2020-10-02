@@ -44,4 +44,4 @@
 
 >  训练权重结果文件每迭代100次会自动保存到/darknet/backup/文件夹下
 
->  停止迭代次数的选择可以参考(https://github.com/AlexeyAB/darknet#when-should-i-stop-training)的内容
+>  停止迭代次数的选择可以参考 (https://github.com/AlexeyAB/darknet#when-should-i-stop-training) 的内容
