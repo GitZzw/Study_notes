@@ -1,3 +1,5 @@
+Optimization hw2
+
 python version of
 Golden section,
 Newton's method,
