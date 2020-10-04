@@ -9,11 +9,12 @@ import xml.etree.ElementTree as ET
 import pickle
 
 
-
+#训练
 class train_yolo():
     def __init__(self, config):
         self.config = config
-
+    
+    #检查图片对应的xml文件是否存在
     def file_check(self):
         img_total = os.listdir(self.config.pic_path)
         for i in img_total:
@@ -24,7 +25,8 @@ class train_yolo():
                 os.remove(pic_path)
                 print(img_name, '.xml文件不存在:', ' 我已经把这张图删了')
 
-
+    #修改训练所需的voc_data.txt文件
+    #其中包含训练分类的数量,训练集路径，验证集路径,训练名字分类文件voc_name.txt路径，生成权重存放路径
     def change_voc_data(self):
         text = []
         text.append('classes = {}'.format(len(self.config.classes)))
@@ -37,12 +39,15 @@ class train_yolo():
                 f.write(text[i] + '\n')
 
 
-
+    #修改训练所需的voc_names.txt文件
+    #包含类别名称，e.g. target pickup
     def change_voc_names(self):
         with open(self.config.voc_names_path, 'w') as f:
             for i in range(len(self.config.classes)):
                 f.write(self.config.classes[i] + '\n')
-
+    
+    #修改cfg文件
+    #主要对神经网络等参数进行调整
     def change_cfg(self):
         with open(self.config.cfg_path, 'r+') as f:
             cfg = f.readlines()
@@ -66,7 +71,7 @@ class train_yolo():
                 f.write(lines)
 
 
-
+    #xml文件转换为包含有label坐标的txt文件
     def covert_to_txt(self):
 
         total_xml = os.listdir(self.config.xml_path)
@@ -88,7 +93,7 @@ class train_yolo():
 
         shutil.copy('%s/data/train.txt' % (self.config.darknet_path), '%s/data/valid.txt' % (self.config.darknet_path))
 
-        
+    #xml文件转换为包含有label坐标的txt文件    
     def convert(self,size, box):
         dw = 1./size[0]
         dh = 1./size[1]
@@ -101,7 +106,8 @@ class train_yolo():
         y = y*dh
         h = h*dh
         return (x,y,w,h)
-
+    
+    #xml文件转换为包含有label坐标的txt文件
     def convert_annotation(self,image_id):
         curent_xml_path = os.path.join(self.config.xml_path,str(image_id)+'.xml')
         in_file = open(curent_xml_path,'r')
@@ -124,7 +130,7 @@ class train_yolo():
             out_file.write(str(cls_id) + " " + " ".join([str(a) for a in bb]) + '\n')
 
 
-
+#验证
 class valid_yolo():
     def __init__(self,config,validpicpath,validxmlpath):
         self.config = config
@@ -144,6 +150,7 @@ class valid_yolo():
                 os.remove(pic_path)
                 print(img_name, '.xml文件不存在:', ' 我已经把这张图删了')
 
+    #自定义验证图像及xml路径，生成包含对应label坐标的txt文件
     def custom(self):
 
         piclist = os.listdir(self.validpicpath)
@@ -200,7 +207,7 @@ class valid_yolo():
 
 
 
-
+#训练
 def yolo_train(config):
 
     # 文件检查 保证xml文件以及对应的pic文件存在
@@ -247,7 +254,7 @@ def yolo_train(config):
     os.system(command)
 
 
-
+#测试一张图像
 def yolo_test(config):
     if(not os.path.exists('backup')):
         print('没有权重文件，请重新训练')
@@ -270,7 +277,7 @@ def yolo_test(config):
 
 
 
-
+#继续之前的权重训练
 def yolo_retrain(config):
     weights_retrain = input('<<<<<<<<<<<<<<<<<请输入上次未训练完的weight路径,一般保存在darknet/backup文件夹下<<<<<<<<<<<<\n')
     while(not os.path.exists(weights_retrain)):
@@ -281,7 +288,7 @@ def yolo_retrain(config):
 
 
 
-
+#验证
 def yolo_valid(config):
     if(not os.path.exists('backup')):
         print('没有权重文件，请训练')
@@ -323,14 +330,14 @@ def yolo_valid(config):
 
 
 
-
+#输入模式
 def getinput():
     mode = int(input('<<<<<<请输入模式  (train输入0;  test输入1;  retrain输入2;  valid输入3)<<<<<<<<\n'))
     while(mode != 0 and mode!=1 and mode!=2 and mode!=3):
         print('input wrong,again')
         mode = int(input('<<<<<<请输入模式  (train输入0;  test输入1;  valid输入2;  valid输入3)<<<<<<<<\n'))
     return mode
-
+#输入分类名称
 def getclasslist():
     classstr = input("<<<<请输入分类的目标集,以空格分隔,回车结束<<<<<<<<<\n")
     classlist=classstr.split(' ')
@@ -342,7 +349,7 @@ def getclasslist():
 
 
 
-
+#环境配置
 def circumstance():
     if(not os.path.exists('yolov4.conv.137')):
         print('缺少文件，准备下载pre-trained weights')
