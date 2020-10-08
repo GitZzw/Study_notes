@@ -212,16 +212,21 @@ int negate(int x) {
  */
 int isAsciiDigit(int x) {
   int sign = 0x1<<31;
-  // ~x + 1 = -x
-  // upperBound + 0x39 = -1
-  //~0x39 + 1 = -0x39
-  //upper = ~0x39 + 1
-  //(upper + x)
   int upperBound = ~(sign|0x39);
   int lowerBound = ~0x30;
   upperBound = sign&(upperBound+x)>>31;
   lowerBound = sign&(lowerBound+1+x)>>31;
   return !(upperBound|lowerBound);
+}
+int isAsciiDigit(int x) {
+    int sign = 0x01<<31;
+    //~0x39 + 1 = -0x39
+    //~0x30 + 1 = -0x30
+    int upperBound = sign&(~0x39+x+1); //当x>0x39该值为0 当x<=0x39该值为Tmin
+    int lowerBound = sign&(~(~0x30+x+1)); //当x<0x30该值为0 当x>=0x30该值为Tmin
+    upperBound = upperBound>>31; //-1
+    lowerBound = lowerBound>>31; //-1
+    return (upperBound+2)&(lowerBound+2); //-1+2=1
 }
 /*
  * conditional - same as x ? y : z
