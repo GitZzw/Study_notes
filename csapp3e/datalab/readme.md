@@ -1,4 +1,4 @@
-# 位操作
+# 位操作 (参考):https://zhuanlan.zhihu.com/p/59534845?utm_source=qq
 
 ## 1.~ & 实现异或xor
 
