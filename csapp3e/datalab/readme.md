@@ -1,6 +1,6 @@
 gcc .\bit.c -o .\bit.exe
 
-# 位操作 (参考):https://zhuanlan.zhihu.com/p/59534845?utm_source=qq
+# 位操作
 
 ## 1.~ & 实现异或xor （排除00 11）
 
@@ -24,4 +24,8 @@ gcc .\bit.c -o .\bit.exe
 
 > (如果是一个正数，则需要找到它最高的一位（假设是n）是1的，再加上符号位，负数取反；判断高位是否有0  ———————> 判断是否为0：!!x ， 不断缩小范围)
 
-## 11. Any integer/unsigned operations incl. ||, &&. also if, while 实现求2乘一个unsigned表示的浮点数 (浮点数的存储形式)
+## 11. Any integer/unsigned operations incl. ||, &&. also if, while 实现floatScale2 求2乘一个unsigned表示的浮点数 (浮点数的存储形式)
+
+## 12. floatFloat2Int 实现将浮点数转换为整数
+
+## 13. floatPower2 求2的x次方
