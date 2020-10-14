@@ -5,7 +5,7 @@
 ![图片](https://github.com/GitZzw/Study_notes/blob/master/ConvexOptimization/hw2/Problem7'sResult2.png?raw=true)
 
 
-![图片](https://github.com/GitZzw/Study_notes/blob/master/ConvexOptimization/hw2/Problem7'sResult.png?raw=true)
+![图片](https://github.com/GitZzw/Study_notes/blob/master/ConvexOptimization/hw2/Problem7'sResult1.png)
 
 ### 2.Secant method (problem 8)
 
