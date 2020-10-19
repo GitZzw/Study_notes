@@ -1,7 +1,7 @@
 # 反汇编方法(linux)
 ## gdb调试器方法
 
-> [gdb](https://man.linuxde.net/objdump)
+> [gdb](http://csapp.cs.cmu.edu/3e/docs/gdbnotes-x86-64.pdf)
 ```
 >gdb bomb 
 >break 37
@@ -87,4 +87,8 @@
   400f41:   5d                      pop    %rbp
   400f42:   c3                      retq   
 ```
+
+
+### bomblab只做了两个练习掌握一下流程，后续有必要再深入研究汇编语言
+> phase_3~phase_6可以[参考](https://www.one-tab.com/page/2WCcL271T-atDDDT2K9Dgw)
 
