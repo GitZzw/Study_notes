@@ -90,5 +90,5 @@
 
 
 ### bomblab只做了两个练习掌握一下流程，后续有必要再深入研究汇编语言
-> phase_3~phase_6可以[参考](https://www.one-tab.com/page/2WCcL271T-atDDDT2K9Dgw)
+> phase_3~phase_6:[参考](https://www.one-tab.com/page/bVPPA1wwRnekrX-2FiBmNQ)
 
