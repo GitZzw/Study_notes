@@ -11,7 +11,7 @@
 ## 2.安装Openvino
 [参考openvino](https://software.intel.com/en-us/articles/get-started-with-neural-compute-stick)
 #### Step1.下载openvino安装包
-最好直接下载我使用的版本2020.4.287
+最好直接下载我使用的版本[2020.4.287](https://pan.baidu.com/s/1X1k8_Hwbyhu7Na1Nx0-WXg) 提取码：jhbo 
 #### Step2.解压安装包
 `tar xvf l_openvino_toolkit_p_2020.4.287.tgz`
 #### Step3.进入安装包
@@ -60,3 +60,4 @@ sudo pip3 install tensorflow==1.5.0
 
 
 # 二.测试识别demo
+
