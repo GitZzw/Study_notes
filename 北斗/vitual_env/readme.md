@@ -26,3 +26,4 @@ python2.7/site-packages
 使用pip3 install XXX，新安装的库会放在这个目录下面
 python3.6/site-packages
 如果使用python3执行程序，那么就不能import python2.7/site-packages中的库
+
