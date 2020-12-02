@@ -9,7 +9,7 @@ import pandas as pd
 
 
 class QLearningTable:
-    def __init__(self, actions=['0up','1down','2right','3left'], learning_rate=0.01, reward_decay=0.9, e_greedy=0.9):
+    def __init__(self, actions=['0up','1down','2right','3left'], learning_rate=0.1, reward_decay=0.9, e_greedy=0.9):
           # a list 此处为[0 1 2 3]
         #self.actions = actions
         self.actions = actions

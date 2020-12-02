@@ -19,7 +19,7 @@ else:
 
 
 UNIT = 40   # pixels
-MAZE_H = 18  # grid height
+MAZE_H = 14  # grid height
 MAZE_W = 16  # grid width
 
 
@@ -56,338 +56,338 @@ class Maze(tk.Tk, object):
 
         # hell  创建黑色hell
         # 第一个为向右两格，向下一格
-        hell1_center = origin + np.array([UNIT * 3, UNIT*2])
+        hell1_center = origin + np.array([-UNIT+UNIT * 3, UNIT*2-2*UNIT])
         self.hell1 = self.canvas.create_rectangle(
             hell1_center[0] - 15, hell1_center[1] - 15,
             hell1_center[0] + 15, hell1_center[1] + 15,
             fill='black')
-        hell2_center = origin + np.array([UNIT*4, UNIT*2])
+        hell2_center = origin + np.array([-UNIT+UNIT*4, UNIT*2-2*UNIT])
         self.hell2 = self.canvas.create_rectangle(
             hell2_center[0] - 15, hell2_center[1] - 15,
             hell2_center[0] + 15, hell2_center[1] + 15,
             fill='black')
 
-        hell3_center = origin + np.array([UNIT * 5, UNIT*2])
+        hell3_center = origin + np.array([-UNIT+UNIT * 5, UNIT*2-2*UNIT])
         self.hell3 = self.canvas.create_rectangle(
             hell3_center[0] - 15, hell3_center[1] - 15,
             hell3_center[0] + 15, hell3_center[1] + 15,
             fill='black')
 
-        hell4_center = origin + np.array([UNIT * 6, UNIT*3])
+        hell4_center = origin + np.array([-UNIT+UNIT * 6, UNIT*3-2*UNIT])
         self.hell4 = self.canvas.create_rectangle(
             hell4_center[0] - 15, hell4_center[1] - 15,
             hell4_center[0] + 15, hell4_center[1] + 15,
             fill='black')
 
-        hell5_center = origin + np.array([UNIT * 2, UNIT*3])
+        hell5_center = origin + np.array([-UNIT+UNIT * 2, UNIT*3-2*UNIT])
         self.hell5 = self.canvas.create_rectangle(
             hell5_center[0] - 15, hell5_center[1] - 15,
             hell5_center[0] + 15, hell5_center[1] + 15,
             fill='black')
-        hell6_center = origin + np.array([UNIT * 2, UNIT*4])
+        hell6_center = origin + np.array([-UNIT+UNIT * 2, UNIT*4-2*UNIT])
         self.hell6 = self.canvas.create_rectangle(
             hell6_center[0] - 15, hell6_center[1] - 15,
             hell6_center[0] + 15, hell6_center[1] + 15,
             fill='black')
-        hell7_center = origin + np.array([UNIT * 3, UNIT*5])
+        hell7_center = origin + np.array([-UNIT+UNIT * 3, UNIT*5-2*UNIT])
         self.hell7 = self.canvas.create_rectangle(
             hell7_center[0] - 15, hell7_center[1] - 15,
             hell7_center[0] + 15, hell7_center[1] + 15,
             fill='black')
-        hell8_center = origin + np.array([UNIT * 4, UNIT*5])
+        hell8_center = origin + np.array([-UNIT+UNIT * 4, UNIT*5-2*UNIT])
         self.hell8 = self.canvas.create_rectangle(
             hell8_center[0] - 15, hell8_center[1] - 15,
             hell8_center[0] + 15, hell8_center[1] + 15,
             fill='black')
-        hell9_center = origin + np.array([UNIT * 5, UNIT*5])
+        hell9_center = origin + np.array([-UNIT+UNIT * 5, UNIT*5-2*UNIT])
         self.hell9 = self.canvas.create_rectangle(
             hell9_center[0] - 15, hell9_center[1] - 15,
             hell9_center[0] + 15, hell9_center[1] + 15,
             fill='black')
-        hell10_center = origin + np.array([UNIT * 6, UNIT*6])
+        hell10_center = origin + np.array([-UNIT+UNIT * 6, UNIT*6-2*UNIT])
         self.hell10 = self.canvas.create_rectangle(
             hell10_center[0] - 15, hell10_center[1] - 15,
             hell10_center[0] + 15, hell10_center[1] + 15,
             fill='black')
         # 第二个为向下两格，向右一格
-        hell11_center = origin + np.array([UNIT * 6, UNIT * 7])
+        hell11_center = origin + np.array([-UNIT+UNIT * 6, UNIT * 7-2*UNIT])
         self.hell11 = self.canvas.create_rectangle(
             hell11_center[0] - 15, hell11_center[1] - 15,
             hell11_center[0] + 15, hell11_center[1] + 15,
             fill='black')
 
-        hell12_center = origin + np.array([UNIT *2, UNIT*7])
+        hell12_center = origin + np.array([-UNIT+UNIT *2, UNIT*7-2*UNIT])
         self.hell12 = self.canvas.create_rectangle(
             hell12_center[0] - 15, hell12_center[1] - 15,
             hell12_center[0] + 15, hell12_center[1] + 15,
             fill='black')
-        hell13_center = origin + np.array([UNIT * 3, UNIT*8])
+        hell13_center = origin + np.array([-UNIT+UNIT * 3, UNIT*8-2*UNIT])
         self.hell13 = self.canvas.create_rectangle(
             hell13_center[0] - 15, hell13_center[1] - 15,
             hell13_center[0] + 15, hell13_center[1] + 15,
             fill='black')
-        hell14_center = origin + np.array([UNIT * 4, UNIT*8])
+        hell14_center = origin + np.array([-UNIT+UNIT * 4, UNIT*8-2*UNIT])
         self.hell14 = self.canvas.create_rectangle(
             hell14_center[0] - 15, hell14_center[1] - 15,
             hell14_center[0] + 15, hell14_center[1] + 15,
             fill='black')
-        hell15_center = origin + np.array([UNIT * 5, UNIT*8])
+        hell15_center = origin + np.array([-UNIT+UNIT * 5, UNIT*8-2*UNIT])
         self.hell15 = self.canvas.create_rectangle(
             hell15_center[0] - 15, hell15_center[1] - 15,
             hell15_center[0] + 15, hell15_center[1] + 15,
             fill='black')
 
-        hell1_center = origin + np.array([UNIT * 3, UNIT*2])
+        hell1_center = origin + np.array([-UNIT+UNIT * 3, UNIT*2-2*UNIT])
         self.hell1 = self.canvas.create_rectangle(
             hell1_center[0] - 15, hell1_center[1] - 15,
             hell1_center[0] + 15, hell1_center[1] + 15,
             fill='black')
-        hell2_center = origin + np.array([UNIT*4, UNIT*2])
+        hell2_center = origin + np.array([-UNIT+UNIT*4, UNIT*2-2*UNIT])
         self.hell2 = self.canvas.create_rectangle(
             hell2_center[0] - 15, hell2_center[1] - 15,
             hell2_center[0] + 15, hell2_center[1] + 15,
             fill='black')
 
-        hell3_center = origin + np.array([UNIT * 5, UNIT*2])
+        hell3_center = origin + np.array([-UNIT+UNIT * 5, UNIT*2-2*UNIT])
         self.hell3 = self.canvas.create_rectangle(
             hell3_center[0] - 15, hell3_center[1] - 15,
             hell3_center[0] + 15, hell3_center[1] + 15,
             fill='black')
 
-        hell4_center = origin + np.array([UNIT * 6, UNIT*3])
+        hell4_center = origin + np.array([-UNIT+UNIT * 6, UNIT*3-2*UNIT])
         self.hell4 = self.canvas.create_rectangle(
             hell4_center[0] - 15, hell4_center[1] - 15,
             hell4_center[0] + 15, hell4_center[1] + 15,
             fill='black')
 
-        hell5_center = origin + np.array([UNIT * 2, UNIT*3])
+        hell5_center = origin + np.array([-UNIT+UNIT * 2, UNIT*3-2*UNIT])
         self.hell5 = self.canvas.create_rectangle(
             hell5_center[0] - 15, hell5_center[1] - 15,
             hell5_center[0] + 15, hell5_center[1] + 15,
             fill='black')
-        hell6_center = origin + np.array([UNIT * 2, UNIT*4])
+        hell6_center = origin + np.array([-UNIT+UNIT * 2, UNIT*4-2*UNIT])
         self.hell6 = self.canvas.create_rectangle(
             hell6_center[0] - 15, hell6_center[1] - 15,
             hell6_center[0] + 15, hell6_center[1] + 15,
             fill='black')
-        hell7_center = origin + np.array([UNIT * 3, UNIT*5])
+        hell7_center = origin + np.array([-UNIT+UNIT * 3, UNIT*5-2*UNIT])
         self.hell7 = self.canvas.create_rectangle(
             hell7_center[0] - 15, hell7_center[1] - 15,
             hell7_center[0] + 15, hell7_center[1] + 15,
             fill='black')
-        hell8_center = origin + np.array([UNIT * 4, UNIT*5])
+        hell8_center = origin + np.array([-UNIT+UNIT * 4, UNIT*5-2*UNIT])
         self.hell8 = self.canvas.create_rectangle(
             hell8_center[0] - 15, hell8_center[1] - 15,
             hell8_center[0] + 15, hell8_center[1] + 15,
             fill='black')
-        hell9_center = origin + np.array([UNIT * 5, UNIT*5])
+        hell9_center = origin + np.array([-UNIT+UNIT * 5, UNIT*5-2*UNIT])
         self.hell9 = self.canvas.create_rectangle(
             hell9_center[0] - 15, hell9_center[1] - 15,
             hell9_center[0] + 15, hell9_center[1] + 15,
             fill='black')
-        hell10_center = origin + np.array([UNIT * 6, UNIT*6])
+        hell10_center = origin + np.array([-UNIT+UNIT * 6, UNIT*6-2*UNIT])
         self.hell10 = self.canvas.create_rectangle(
             hell10_center[0] - 15, hell10_center[1] - 15,
             hell10_center[0] + 15, hell10_center[1] + 15,
             fill='black')
         # 第二个为向下两格，向右一格
-        hell11_center = origin + np.array([UNIT * 6, UNIT * 7])
+        hell11_center = origin + np.array([-UNIT+UNIT * 6, UNIT * 7-2*UNIT])
         self.hell11 = self.canvas.create_rectangle(
             hell11_center[0] - 15, hell11_center[1] - 15,
             hell11_center[0] + 15, hell11_center[1] + 15,
             fill='black')
 
-        hell12_center = origin + np.array([UNIT *2, UNIT*7])
+        hell12_center = origin + np.array([-UNIT+UNIT *2, UNIT*7-2*UNIT])
         self.hell12 = self.canvas.create_rectangle(
             hell12_center[0] - 15, hell12_center[1] - 15,
             hell12_center[0] + 15, hell12_center[1] + 15,
             fill='black')
-        hell13_center = origin + np.array([UNIT * 3, UNIT*8])
+        hell13_center = origin + np.array([-UNIT+UNIT * 3, UNIT*8-2*UNIT])
         self.hell13 = self.canvas.create_rectangle(
             hell13_center[0] - 15, hell13_center[1] - 15,
             hell13_center[0] + 15, hell13_center[1] + 15,
             fill='black')
-        hell14_center = origin + np.array([UNIT * 4, UNIT*8])
+        hell14_center = origin + np.array([-UNIT+UNIT * 4, UNIT*8-2*UNIT])
         self.hell14 = self.canvas.create_rectangle(
             hell14_center[0] - 15, hell14_center[1] - 15,
             hell14_center[0] + 15, hell14_center[1] + 15,
             fill='black')
-        hell15_center = origin + np.array([UNIT * 5, UNIT*8])
+        hell15_center = origin + np.array([-UNIT+UNIT * 5, UNIT*8-2*UNIT])
         self.hell15 = self.canvas.create_rectangle(
             hell15_center[0] - 15, hell15_center[1] - 15,
             hell15_center[0] + 15, hell15_center[1] + 15,
             fill='black')
 
-        hell16_center = origin + np.array([UNIT * 11, UNIT*2])
+        hell16_center = origin + np.array([-UNIT+UNIT * 11, UNIT*2-2*UNIT])
         self.hell16 = self.canvas.create_rectangle(
             hell16_center[0] - 15, hell16_center[1] - 15,
             hell16_center[0] + 15, hell16_center[1] + 15,
             fill='black')
-        hell17_center = origin + np.array([UNIT * 12, UNIT*2])
+        hell17_center = origin + np.array([-UNIT+UNIT * 12, UNIT*2-2*UNIT])
         self.hell17 = self.canvas.create_rectangle(
             hell17_center[0] - 15, hell17_center[1] - 15,
             hell17_center[0] + 15, hell17_center[1] + 15,
             fill='black')
-        hell18_center = origin + np.array([UNIT * 13, UNIT*2])
+        hell18_center = origin + np.array([-UNIT+UNIT * 13, UNIT*2-2*UNIT])
         self.hell18 = self.canvas.create_rectangle(
             hell18_center[0] - 15, hell18_center[1] - 15,
             hell18_center[0] + 15, hell18_center[1] + 15,
             fill='black')
-        hell19_center = origin + np.array([UNIT * 12, UNIT*3])
+        hell19_center = origin + np.array([-UNIT+UNIT * 12, UNIT*3-2*UNIT])
         self.hell19 = self.canvas.create_rectangle(
             hell19_center[0] - 15, hell19_center[1] - 15,
             hell19_center[0] + 15, hell19_center[1] + 15,
             fill='black')
-        hell20_center = origin + np.array([UNIT * 12, UNIT*4])
+        hell20_center = origin + np.array([-UNIT+UNIT * 12, UNIT*4-2*UNIT])
         self.hell20 = self.canvas.create_rectangle(
             hell20_center[0] - 15, hell20_center[1] - 15,
             hell20_center[0] + 15, hell20_center[1] + 15,
             fill='black')
         # 第二个为向下两格，向右一格
-        hell21_center = origin + np.array([UNIT * 12, UNIT * 5])
+        hell21_center = origin + np.array([-UNIT+UNIT * 12, UNIT * 5-2*UNIT])
         self.hell21 = self.canvas.create_rectangle(
             hell21_center[0] - 15, hell21_center[1] - 15,
             hell21_center[0] + 15, hell21_center[1] + 15,
             fill='black')
 
-        hell22_center = origin + np.array([UNIT *12, UNIT*6])
+        hell22_center = origin + np.array([-UNIT+UNIT *12, UNIT*6-2*UNIT])
         self.hell22 = self.canvas.create_rectangle(
             hell22_center[0] - 15, hell22_center[1] - 15,
             hell22_center[0] + 15, hell22_center[1] + 15,
             fill='black')
-        hell23_center = origin + np.array([UNIT * 12, UNIT*7])
+        hell23_center = origin + np.array([-UNIT+UNIT * 12, UNIT*7-2*UNIT])
         self.hell23 = self.canvas.create_rectangle(
             hell23_center[0] - 15, hell23_center[1] - 15,
             hell23_center[0] + 15, hell23_center[1] + 15,
             fill='black')
-        hell24_center = origin + np.array([UNIT * 11, UNIT*8])
+        hell24_center = origin + np.array([-UNIT+UNIT * 11, UNIT*8-2*UNIT])
         self.hell24 = self.canvas.create_rectangle(
             hell24_center[0] - 15, hell24_center[1] - 15,
             hell24_center[0] + 15, hell24_center[1] + 15,
             fill='black')
-        hell25_center = origin + np.array([UNIT * 10, UNIT*8])
+        hell25_center = origin + np.array([-UNIT+UNIT * 10, UNIT*8-2*UNIT])
         self.hell25 = self.canvas.create_rectangle(
             hell25_center[0] - 15, hell25_center[1] - 15,
             hell25_center[0] + 15, hell25_center[1] + 15,
             fill='black')
-        hell26_center = origin + np.array([UNIT * 9, UNIT*7])
+        hell26_center = origin + np.array([-UNIT+UNIT * 9, UNIT*7-2*UNIT])
         self.hell26 = self.canvas.create_rectangle(
             hell26_center[0] - 15, hell26_center[1] - 15,
             hell26_center[0] + 15, hell26_center[1] + 15,
             fill='black')
 
-        a1_center = origin + np.array([UNIT * 2, UNIT*10])
+        a1_center = origin + np.array([-UNIT+UNIT * 2, UNIT*10-2*UNIT])
         self.h1 = self.canvas.create_rectangle(
             a1_center[0] - 15, a1_center[1] - 15,
             a1_center[0] + 15, a1_center[1] + 15,
             fill='black')
-        a2_center = origin + np.array([UNIT * 3, UNIT*10])
+        a2_center = origin + np.array([-UNIT+UNIT * 3, UNIT*10-2*UNIT])
         self.h2 = self.canvas.create_rectangle(
             a2_center[0] - 15, a2_center[1] - 15,
             a2_center[0] + 15, a2_center[1] + 15,
             fill='black')
-        a3_center = origin + np.array([UNIT * 4, UNIT*10])
+        a3_center = origin + np.array([-UNIT+UNIT * 4, UNIT*10-2*UNIT])
         self.h3 = self.canvas.create_rectangle(
             a3_center[0] - 15, a3_center[1] - 15,
             a3_center[0] + 15, a3_center[1] + 15,
             fill='black')
-        a4_center = origin + np.array([UNIT * 5, UNIT*10])
+        a4_center = origin + np.array([-UNIT+UNIT * 5, UNIT*10-2*UNIT])
         self.h4 = self.canvas.create_rectangle(
             a4_center[0] - 15, a4_center[1] - 15,
             a4_center[0] + 15, a4_center[1] + 15,
             fill='black')
 
-        a5_center = origin + np.array([UNIT * 6, UNIT*10])
+        a5_center = origin + np.array([-UNIT+UNIT * 6, UNIT*10-2*UNIT])
         self.h5 = self.canvas.create_rectangle(
             a5_center[0] - 15, a5_center[1] - 15,
             a5_center[0] + 15, a5_center[1] + 15,
             fill='black')
-        a6_center = origin + np.array([UNIT * 4, UNIT*11])
+        a6_center = origin + np.array([-UNIT+UNIT * 4, UNIT*11-2*UNIT])
         self.h6 = self.canvas.create_rectangle(
             a6_center[0] - 15, a6_center[1] - 15,
             a6_center[0] + 15, a6_center[1] + 15,
             fill='black')
-        a7_center = origin + np.array([UNIT * 4, UNIT*12])
+        a7_center = origin + np.array([-UNIT+UNIT * 4, UNIT*12-2*UNIT])
         self.h7 = self.canvas.create_rectangle(
             a7_center[0] - 15, a7_center[1] - 15,
             a7_center[0] + 15, a7_center[1] + 15,
             fill='black')
-        a8_center = origin + np.array([UNIT * 4, UNIT*13])
+        a8_center = origin + np.array([-UNIT+UNIT * 4, UNIT*13-2*UNIT])
         self.h8 = self.canvas.create_rectangle(
             a8_center[0] - 15, a8_center[1] - 15,
             a8_center[0] + 15, a8_center[1] + 15,
             fill='black')
-        a9_center = origin + np.array([UNIT * 4, UNIT*14])
+        a9_center = origin + np.array([-UNIT+UNIT * 4, UNIT*14-2*UNIT])
         self.h9 = self.canvas.create_rectangle(
             a9_center[0] - 15, a9_center[1] - 15,
             a9_center[0] + 15, a9_center[1] + 15,
             fill='black')
-        a10_center = origin + np.array([UNIT * 4, UNIT*15])
+        a10_center = origin + np.array([-UNIT+UNIT * 4, UNIT*15-2*UNIT])
         self.h10 = self.canvas.create_rectangle(
             a10_center[0] - 15, a10_center[1] - 15,
             a10_center[0] + 15, a10_center[1] + 15,
             fill='black')
-        a11_center = origin + np.array([UNIT * 9, UNIT*10])
+        a11_center = origin + np.array([-UNIT+UNIT * 9, UNIT*10-2*UNIT])
         self.h11 = self.canvas.create_rectangle(
             a11_center[0] - 15, a11_center[1] - 15,
             a11_center[0] + 15, a11_center[1] + 15,
             fill='black')
-        a12_center = origin + np.array([UNIT * 9, UNIT*11])
+        a12_center = origin + np.array([-UNIT+UNIT * 9, UNIT*11-2*UNIT])
         self.h12 = self.canvas.create_rectangle(
             a12_center[0] - 15, a12_center[1] - 15,
             a12_center[0] + 15, a12_center[1] + 15,
             fill='black')
-        a13_center = origin + np.array([UNIT * 9, UNIT*12])
+        a13_center = origin + np.array([-UNIT+UNIT * 9, UNIT*12-2*UNIT])
         self.h13 = self.canvas.create_rectangle(
             a13_center[0] - 15, a13_center[1] - 15,
             a13_center[0] + 15, a13_center[1] + 15,
             fill='black')
-        a14_center = origin + np.array([UNIT * 9, UNIT*13])
+        a14_center = origin + np.array([-UNIT+UNIT * 9, UNIT*13-2*UNIT])
         self.h14 = self.canvas.create_rectangle(
             a14_center[0] - 15, a14_center[1] - 15,
             a14_center[0] + 15, a14_center[1] + 15,
             fill='black')
-        a15_center = origin + np.array([UNIT * 9, UNIT*14])
+        a15_center = origin + np.array([-UNIT+UNIT * 9, UNIT*14-2*UNIT])
         self.h15 = self.canvas.create_rectangle(
             a15_center[0] - 15, a15_center[1] - 15,
             a15_center[0] + 15, a15_center[1] + 15,
             fill='black')
-        a16_center = origin + np.array([UNIT * 10, UNIT*15])
+        a16_center = origin + np.array([-UNIT+UNIT * 10, UNIT*15-2*UNIT])
         self.h16 = self.canvas.create_rectangle(
             a16_center[0] - 15, a16_center[1] - 15,
             a16_center[0] + 15, a16_center[1] + 15,
             fill='black')
-        a17_center = origin + np.array([UNIT * 11, UNIT*15])
+        a17_center = origin + np.array([-UNIT+UNIT * 11, UNIT*15-2*UNIT])
         self.h17 = self.canvas.create_rectangle(
             a17_center[0] - 15, a17_center[1] - 15,
             a17_center[0] + 15, a17_center[1] + 15,
             fill='black')
-        a18_center = origin + np.array([UNIT * 12, UNIT*15])
+        a18_center = origin + np.array([-UNIT+UNIT * 12, UNIT*15-2*UNIT])
         self.h18 = self.canvas.create_rectangle(
             a18_center[0] - 15, a18_center[1] - 15,
             a18_center[0] + 15, a18_center[1] + 15,
             fill='black')
-        a19_center = origin + np.array([UNIT * 13, UNIT*14])
+        a19_center = origin + np.array([-UNIT+UNIT * 13, UNIT*14-2*UNIT])
         self.h19 = self.canvas.create_rectangle(
             a19_center[0] - 15, a19_center[1] - 15,
             a19_center[0] + 15, a19_center[1] + 15,
             fill='black')
-        a20_center = origin + np.array([UNIT * 13, UNIT*13])
+        a20_center = origin + np.array([-UNIT+UNIT * 13, UNIT*13-2*UNIT])
         self.h20 = self.canvas.create_rectangle(
             a20_center[0] - 15, a20_center[1] - 15,
             a20_center[0] + 15, a20_center[1] + 15,
             fill='black')
-        a21_center = origin + np.array([UNIT * 13, UNIT*12])
+        a21_center = origin + np.array([-UNIT+UNIT * 13, UNIT*12-2*UNIT])
         self.h21 = self.canvas.create_rectangle(
             a21_center[0] - 15, a21_center[1] - 15,
             a21_center[0] + 15, a21_center[1] + 15,
             fill='black')
-        a22_center = origin + np.array([UNIT * 13, UNIT*11])
+        a22_center = origin + np.array([-UNIT+UNIT * 13, UNIT*11-2*UNIT])
         self.h22 = self.canvas.create_rectangle(
             a22_center[0] - 15, a22_center[1] - 15,
             a22_center[0] + 15, a22_center[1] + 15,
             fill='black')
-        a23_center = origin + np.array([UNIT * 13, UNIT*10])
+        a23_center = origin + np.array([-UNIT+UNIT * 13, UNIT*10-2*UNIT])
         self.h23 = self.canvas.create_rectangle(
             a23_center[0] - 15, a23_center[1] - 15,
             a23_center[0] + 15, a23_center[1] + 15,
@@ -396,7 +396,7 @@ class Maze(tk.Tk, object):
 
         # 创建得分点  create oval
         # 向右两格向下一格
-        oval_center = origin + np.array([UNIT * 7, UNIT*9])
+        oval_center = origin + np.array([-UNIT+UNIT * 7, UNIT*9-2*UNIT])
         self.oval = self.canvas.create_oval(
             oval_center[0] - 15, oval_center[1] - 15,
             oval_center[0] + 15, oval_center[1] + 15,
@@ -466,10 +466,11 @@ class Maze(tk.Tk, object):
         # done为episode标志变量，是否结束一轮游戏
         if s_ in [self.canvas.coords(self.oval)]:
             reward = 1
-            self.count += 1
-            if(self.count == 3):
-                done = True
-                self.count = 0
+            # self.count += 1
+            # if(self.count == 3):
+            #     done = True
+            #     self.count = 0
+            done = True
             s_ = 'terminal'
         # 如果移动后到了hell
         elif s_ in [self.canvas.coords(self.hell1), self.canvas.coords(self.hell2),self.canvas.coords(self.hell3),
@@ -499,8 +500,8 @@ class Maze(tk.Tk, object):
 
         return s_, reward, done
 
-    def render(self):
-        time.sleep(0.08)
+    def render(self,index):
+        time.sleep(index)
         self.update()
 
 
@@ -514,9 +515,9 @@ def update():
             if done:
                 break
 
-if __name__ == '__main__':
-    env = Maze()
-
-
-    env.after(100, update) #100ms调用update一次
-    env.mainloop()
+# if __name__ == '__main__':
+#     env = Maze()
+#
+#
+#     env.after(100, update) #100ms调用update一次
+#     env.mainloop()

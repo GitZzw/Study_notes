@@ -14,6 +14,7 @@ from RL_brain import QLearningTable
 import numpy as np
 import pandas as pd
 
+
 def update():
     for episode in range(1000):
         # initial observation
@@ -21,7 +22,11 @@ def update():
 
         while True:
             # fresh env
-            env.render()
+            if(episode>700):
+                env.render(0.1)
+            else:
+                env.render(0.0001)
+
 
             # RL choose action based on observation
             action = RL.choose_action(str(observation))
