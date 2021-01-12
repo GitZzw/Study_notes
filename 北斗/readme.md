@@ -1,4 +1,4 @@
-2020上海北斗高分比赛 (参考2020山西大同照激光比赛)
+2020上海北斗高分比赛    (参考2020山西大同照激光比赛)
 
 # yolov3_tiny + movidius + Ros melodic18.04 + upcore + realsense
 
